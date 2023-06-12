@@ -16,9 +16,10 @@ This tech report (Chapter 3) describes the dataset and the methodology followed 
 HOW TO USE:
 
 1. Clone the GitHub repository or download the source code from the release page.
-2. Navigate to the project directory and the subfolers venv\Scripts\ in cmd using CD (EXAMPLE: cd C:\Users\username\downloads\flaskCNN\venv\Scripts)
-3. Type "activate" to activate the venv (Virtual Environment). Successfully doing so will result in the console displaying (venv) infront of the current path (EXAMPLE: (venv) C:\Users\username\downloads\flaskCNN\venv\Scripts).
-4. Install the necessary dependencies by running the following command: pip install -r requirements.txt (This will install all the required packages and dependencies for the project).
-5. Once the previous steps are completed you can type "flask run" in the console and it will provide a html link to your local port, copy this and paste into your webbrowers searchbar and hit enter.
-6. Follow the instructions on the website. Enjoy!
+2. Navigate to the project directory in cmd using CD (EXAMPLE: cd C:\Users\username\downloads\flaskCNN)
+3. Create a virtual environment using the following command: "python -m venv venv"
+4. Activate the virtual environment using these commands =  for Windows: "venv\Scripts\activate" , for Mac: "source venv/bin/activate"
+5. Install the necessary dependencies by running the following command: pip install -r requirements.txt (This will install all the required packages and dependencies for the project).
+6. Once the previous steps are completed you can type "flask run" in the console and it will provide a html link to your local port, copy this and paste into your webbrowers searchbar and hit enter.
+7. Follow the instructions on the website. Enjoy!
 
