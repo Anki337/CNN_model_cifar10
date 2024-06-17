@@ -9,7 +9,7 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
 app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model = load_model(os.path.join(BASE_DIR, 'best_model.hdf5'))
+model = load_model(os.path.join(BASE_DIR, 'final_model.hdf5'))
 
 ALLOWED_EXT = set(['jpg', 'jpeg', 'png', 'jfif'])
 
@@ -92,7 +92,7 @@ def success():
                 return render_template('index.html', error=error)
 
 
-        elif (request.files):
+        elif request.files:
             file = request.files['file']
             if file and allowed_file(file.filename):
                 file.save(os.path.join(target_img, file.filename))
@@ -113,7 +113,7 @@ def success():
             else:
                 error = "Please upload images of jpg , jpeg and png extension only"
 
-            if (len(error) == 0):
+            if len(error) == 0:
                 return render_template('success.html', img=img, predictions=predictions)
             else:
                 return render_template('index.html', error=error)
